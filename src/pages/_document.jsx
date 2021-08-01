@@ -1,14 +1,15 @@
+import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class NextDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, };
+    return { ...initialProps };
   }
 
   render() {
     return (
-      <Html lang='ko'>
+      <Html lang="ko">
         <Head />
         <body>
           <Main />
