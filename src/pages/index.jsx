@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { css } from '@emotion/react';
 
-const index = () => {
+const IndexPage = () => {
   const [word, setWord] = useState('React');
 
   const onClickButton = useCallback(() => {
@@ -26,11 +26,11 @@ const index = () => {
   return (
     <>
       <div css={style}>Hello {word}!!</div>
-      <button type="button" onClick={onClickButton}>
+      <button type='button' onClick={onClickButton}>
         클릭해서 변경
       </button>
     </>
   );
 };
 
-export default index;
+export default IndexPage;

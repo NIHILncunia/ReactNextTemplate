@@ -8,7 +8,10 @@ module.exports = {
   },
   extends: [
     'airbnb',
+    'airbnb/hooks',
     'prettier',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     'eslint:recommended',
     'plugin:prettier/recommended',
   ],
@@ -16,17 +19,21 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: 'module',
   },
-  plugins: ['import', 'react', 'react-hooks'],
+  plugins: ['import', 'react', 'react-hooks', 'prettier'],
   rules: {
-    'no-console': 0,
-    'no-unused-vars': 1,
-    'no-unexpected-multiline': 0,
-    'import/no-extraneous-dependencies': 0,
-    'import/no-unresolved': 0,
-    'react/jsx-props-no-spreading': 0,
-    'react/forbid-prop-types': 0,
+    'prettier/prettier': 'off',
+    'no-console': 'off',
+    'no-unused-vars': 'warn',
+    'no-unexpected-multiline': 'off',
+
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
+
+    'react/jsx-props-no-spreading': 'off',
+    'react/forbid-prop-types': 'off',
     'react/jsx-filename-extension': [
-      2,
+      'error',
       {
         extensions: ['.js', '.jsx'],
       },
