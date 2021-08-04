@@ -1,20 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { css } from '@emotion/react';
+import { useDispatch, useSelector } from 'react-redux';
+import { ChangeWord } from '@/reducers/TestReducer';
 
 const IndexPage = () => {
-  const [word, setWord] = useState('React');
+  const word = useSelector((state) => state.test.word);
+  const dispatch = useDispatch();
 
   const onClickButton = useCallback(() => {
-    switch (word) {
-      case 'React':
-        setWord('Vue');
-        break;
-      case 'Vue':
-        setWord('React');
-        break;
-      default:
-        break;
-    }
+    dispatch(ChangeWord());
   }, [word]);
 
   const style = css`

@@ -25,10 +25,14 @@ module.exports = {
     'no-console': 'off',
     'no-unused-vars': 'warn',
     'no-unexpected-multiline': 'off',
+    'no-use-before-define': 'off',
+    'spaced-comment': 'off',
+    'no-param-reassign': 'off',
 
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
 
     'react/jsx-props-no-spreading': 'off',
     'react/forbid-prop-types': 'off',
@@ -38,5 +42,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+
+    'react-hooks/exhaustive-deps': 'off',
   },
 };
