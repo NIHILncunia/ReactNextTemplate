@@ -9,7 +9,7 @@ const IndexPage = () => {
 
   const onClickButton = useCallback(() => {
     dispatch(ChangeWord());
-  }, [word]);
+  }, [ word, ]);
 
   const style = css`
     padding: 10px;
