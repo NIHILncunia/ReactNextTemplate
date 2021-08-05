@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: [ 'import', 'react', 'react-hooks', ],
   rules: {
+    // 일반 규칙
     'no-console': 'off',
     'no-unused-vars': 'warn',
     'no-unexpected-multiline': 'off',
@@ -54,24 +55,37 @@ module.exports = {
       exports: 'never',
     }, ],
     'jsx-quotes': [ 'error', 'prefer-single', ],
+    'linebreak-style': 'off',
 
-    'import/extensions': 'off',
+    // 임포트 규칙
+    'import/extensions': [ 'error', 'ignorePackages', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    }, ],
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
 
+    // 리액트 규칙
     'react/jsx-props-no-spreading': 'off',
     'react/forbid-prop-types': 'off',
-    'react/jsx-filename-extension': [ 'error', { extensions: [ '.js', '.jsx', ], }, ],
+    'react/jsx-filename-extension': [ 'error', {
+      extensions: [ 'js', 'jsx', '.ts', '.tsx', ],
+    }, ],
     'react/no-danger': 'off',
     'react/jsx-curly-brace-presence': [
       'warn',
       { props: 'never', children: 'never', },
     ],
     'react/require-default-props': 'off',
-    'react-hooks/exhaustive-deps': 'off',
     'react/jsx-one-expression-per-line': 'off',
 
+    // 리액트 훅스 규칙
+    'react-hooks/exhaustive-deps': 'off',
+
+    // jsx 규칙
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
