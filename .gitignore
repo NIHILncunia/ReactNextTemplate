@@ -103,4 +103,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# 웹스톰 설정 파일
 .idea/
