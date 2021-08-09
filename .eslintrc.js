@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     commonjs: true,
     node: true,
-    es6: true,
+    es2021: true,
   },
   extends: [
     'airbnb',
@@ -17,6 +17,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: [ 'import', 'react', 'react-hooks', ],
   rules: {
@@ -46,7 +49,7 @@ module.exports = {
     ],
     'object-curly-spacing': [ 'warn', 'always', ],
     'no-shadow': 'off',
-    indent: [ 'warn', 2, ],
+    indent: [ 'warn', 2, { SwitchCase: 1, }, ],
     'comma-dangle': [ 'warn', {
       arrays: 'always',
       functions: 'never',
