@@ -58,20 +58,17 @@ module.exports = {
       exports: 'never',
     }, ],
     'jsx-quotes': [ 'error', 'prefer-single', ],
-    'linebreak-style': [ 'warn', 'windows', ],
+    'linebreak-style': 'off',
+    'prefer-const': 'off',
     'max-len': 'off',
-    'lines-between-class-members': 'off',
-    'no-underscore-dangle': 'off',
+    'no-else-return': 'off',
+    'global-require': 'off',
 
     // 임포트 규칙
-    'import/extensions': [ 'error', 'never', {
-      ignorePackages: true,
-      pattern: {
-        json: 'always',
-      },
-    }, ],
+    'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
+    'import/no-dynamic-require': 'off',
     'import/prefer-default-export': 'off',
 
     // 리액트 규칙
@@ -87,7 +84,6 @@ module.exports = {
     ],
     'react/require-default-props': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'react/display-name': 'off',
 
     // 리액트 훅스 규칙
     'react-hooks/exhaustive-deps': 'off',
